@@ -19,6 +19,8 @@ pipeline {
     stage('Run Container Local') {
       steps {
         sh 'bash ./jenkins/scripts/run-container.sh'
+        input(message: 'Are you done running the container locally?', ok: 'Yes')
+        sh 'bash ./jenkins/scripts/cleanup-containers.sh'
       }
     }
   }
