@@ -8,7 +8,7 @@ pipeline {
     }
     stage('Clean Prune Images') {
       steps {
-        sh 'bash .jenkins/scripts/cleanup-images.sh'
+        sh 'bash ./jenkins/scripts/cleanup-images.sh'
       }
     }
   }
