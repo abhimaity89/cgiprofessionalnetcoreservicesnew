@@ -13,7 +13,7 @@ pipeline {
     }
     stage('Push Images') {
       steps {
-        sh 'bash .\\jenkins\\scripts\\push-images.sh'
+        sh 'bash ./jenkins/scripts/push-images.sh'
       }
     }
   }
